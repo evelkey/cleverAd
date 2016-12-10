@@ -29,11 +29,11 @@ def makeCluster(data):
 
 
 
-
-emberek = ([1,1],[2,2],[3,3],[4,4])
-antennak = ([5,5],[3,3])
-data = binding(emberek,antennak)
-print(makeCluster(data))
+def test():
+    emberek = ([1,1],[2,2],[3,3],[4,4])
+    antennak = ([5,5],[3,3])
+    data = binding(emberek,antennak)
+    print(makeCluster(data))
 
 
 
