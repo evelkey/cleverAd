@@ -17,27 +17,27 @@ def isInBudapest(lati,longi):
 	dx = 47.478452
 	dy = 19.106307
 
-
 	inX = False
 	inY = False
 
 	if(lati > dx and lati < ax):
 		inX = True
-	if(longi < dy and longi > ay):	
+	if(longi > dy and longi < ay):	
 		inY = True
 
 	return (inX and inY)
 
 
-print(isInBudapest(47.527420, 19.062300))
+# print(isInBudapest(47.499620, 19.058110))
 
-# for index,row in msck.iterrows():
-	# lati = row['latitude']
-	# longi = row['longitude']
-	# content = 'new google.maps.LatLng(' + str(lati) + ',' + str(longi) + '),'
+for index,row in msck.iterrows():
+	lati = row['latitude']
+	longi = row['longitude']
+	content = 'new google.maps.LatLng(' + str(lati) + ',' + str(longi) + '),'
 	
-	# if (content != 'new google.maps.LatLng(nan,nan),'):
-	# 	if (isInBudapest(lati,longi)):
-	# 		with open('./output', 'a') as f1:
-	# 			f1.write(content + os.linesep)
+	if (content != 'new google.maps.LatLng(nan,nan),'):
+		if (isInBudapest(lati,longi)):
+			with open('./output.txt', 'a') as f1:
+				f1.write(content + os.linesep)
+
 
