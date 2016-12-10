@@ -18,22 +18,16 @@ def binding(emberek,antennak):
 			dist = distance(ember,antenna)
 			distances.append(dist)
 		asd.append(antennak[distances.index(min(distances))])
-	
 	return asd
-
-
 
 def makeCluster(data):
 	return [len(list(group)) for key, group in groupby(data)]
 
 
-
-
-
 emberek = ([1,1],[2,2],[3,3],[4,4])
 antennak = ([5,5],[3,3])
 data = binding(emberek,antennak)
-print(makeCluster(data))
+print(data)
 
 
 
